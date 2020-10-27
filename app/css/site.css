@@ -145,6 +145,8 @@ html { font-size: 100%; }
 
 html, body { font-family: "Montserrat", sans-serif !important; overflow-x: hidden; }
 
+body.js_burger-active { overflow: hidden !important; touch-action: none !important; }
+
 body.js_burger-active main, body.js_burger-active footer { display: none; }
 
 body.js_burger-active .header_top-menu { position: fixed; width: 100%; height: 100%; margin: 0; background-color: #1f2021; left: 0; top: 0; z-index: 100; flex-direction: column; justify-content: center; align-items: center; }
@@ -181,7 +183,7 @@ body.js_burger-active .header_top-contacts a { width: 175px; margin-left: auto; 
 
 .header_container { display: flex; flex-direction: column; z-index: 2; position: relative; }
 
-.header_top { display: flex; flex-direction: row; align-items: center; margin-bottom: 50px; }
+.header_top { display: flex; flex-direction: row; align-items: center; margin-bottom: 50px; z-index: 10; position: relative; }
 
 @media (max-width: 960px) { .header_top { margin-bottom: 30px; } }
 
@@ -231,7 +233,7 @@ body.js_burger-active .header_top-contacts a { width: 175px; margin-left: auto; 
 
 @media (max-width: 640px) { .header_top-menu li { display: none; } }
 
-.header_top-contacts { margin-left: auto; }
+.header_top-contacts { margin-left: auto; z-index: 10; position: relative; }
 
 .header_top-contacts a { display: block; font-weight: bold; font-size: 24px; line-height: 29px; color: #fff; margin-bottom: 3px; text-align: right; transition: 0.4s ease; position: relative; overflow: hidden; display: block; }
 
@@ -284,6 +286,8 @@ body.js_burger-active .header_top-contacts a { width: 175px; margin-left: auto; 
 .choice_header p.choice_header-btn:hover { color: #47a9c7; text-decoration: underline; }
 
 .choice_header p.choice_header-btn:hover:after { transform: scale(1.3); }
+
+.choice_header p.choice_header-btn.js_sorted:after { transform: scale(1, -1); }
 
 @media (max-width: 960px) { .choice_header p { margin-right: 40px; }
   .choice_header p.choice_header-btn { margin-right: 45px; padding-right: 20px; } }
@@ -441,13 +445,17 @@ body.js_burger-active .header_top-contacts a { width: 175px; margin-left: auto; 
 
 .footer_form-bottom .custom-checkbox input:disabled + span::before { background-color: #6ebbd3; }
 
-.messaage { display: block; position: fixed; transition: 0.5s ease; text-align: center; right: -1000px; top: 10px; width: 350px; padding-top: 18px; padding-bottom: 18px; background-color: #6ebbd3; z-index: 9999; border-radius: 10px; }
+.messaage { display: flex; flex-direction: column-reverse; position: fixed; text-align: center; right: 10px; bottom: 10px; z-index: 999; width: 350px; overflow: hidden; }
 
-.messaage p { font-size: 18px; color: #fff; font-weight: bold; }
+@media (max-width: 640px) { .messaage { width: 200px; } }
 
-.messaage.js_active { right: 10px; }
+.messaage p { font-size: 18px; padding-top: 18px; padding-bottom: 18px; background-color: #6ebbd3; color: #fff; width: 100%; z-index: 1000; font-weight: bold; margin-top: 10px; box-shadow: inset 0 0 8px 4px rgba(0, 0, 0, 0.4); border-radius: 10px; position: relative; display: block; }
 
-.btn { display: block; width: 100%; outline: 0; border: 0; box-shadow: none; cursor: pointer; padding-top: 24px; padding-bottom: 24px; text-align: center; color: #fff; background-color: #6ebbd3; transition: 0.4s ease; border-radius: 10px; font-weight: 700; }
+.messaage p:last-of-type { margin-top: 0; }
+
+@media (max-width: 640px) { .messaage p { font-size: 14px; padding-top: 14px; padding-bottom: 14px; margin-top: 8px; } }
+
+.btn { display: block; width: 100%; outline: 0; border: 0; box-shadow: none; cursor: pointer; padding-top: 24px; padding-bottom: 24px; text-align: center; color: #fff; background-color: #6ebbd3; transition: 0.4s ease; border-radius: 10px; font-weight: 700; position: relative; z-index: 999; }
 
 .btn:hover { background-color: #338ca8; }
 
@@ -460,6 +468,17 @@ body.js_burger-active .header_top-contacts a { width: 175px; margin-left: auto; 
 .btn-empty:active { transition: 0s; background-color: #000; color: #fff; }
 
 @media (max-width: 640px) { .btn { padding-top: 18px; padding-bottom: 18px; } }
+
+.js_message-item--anim { animation: messageShow 4s forwards; }
+
+@keyframes messageShow { 0% { display: none;
+    opacity: 0; }
+  25% { display: block;
+    opacity: 1; }
+  75% { display: none;
+    opacity: 0; }
+  100% { display: none;
+    opacity: 0; } }
 
 body::-webkit-scrollbar { width: 12px; }
 

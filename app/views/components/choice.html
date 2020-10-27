@@ -12,19 +12,19 @@
                     </strong>
                 </p>
 
-                <p class="choice_header-btn">
+                <p class="choice_header-btn js_choice_header-btn " data-value="price">
                     Цене
                 </p>
 
-                <p class="choice_header-btn">
+                <p class="choice_header-btn js_choice_header-btn " data-value="age">
                     Возрасту
                 </p>
     
             </div>
     
-            <div class="choice_main js_choice_header">
+            <div class="choice_main js_choice_main">
 
-                <div class="choice_main-card">
+                <div class="choice_main-card js_choice_main-card" data-price="5000" data-age="1">
 
                     <div class="choice_main-card--header">
 
@@ -54,8 +54,8 @@
                             </li>
 
                             <li>
-                                <span>
-                                    2 мес.
+                                <span class="js_card-age">
+                                    1 мес.
                                 </span>
 
                                 Возраст
@@ -71,7 +71,7 @@
 
                         </ul>
 
-                        <p>
+                        <p class="js_card-cost" >
                             5 000 руб.
                         </p>
 
@@ -88,7 +88,7 @@
 
                 </div>
 
-                <div class="choice_main-card js_sold">
+                <div class="choice_main-card js_choice_main-card js_sold" data-price="20000" data-age="2"> 
 
                     <div class="choice_main-card--header">
 
@@ -114,7 +114,7 @@
                             </li>
 
                             <li>
-                                <span>
+                                <span class="js_card-age">
                                     2 мес.
                                 </span>
 
@@ -131,7 +131,7 @@
 
                         </ul>
 
-                        <p>
+                        <p class="js_card-cost" >
                             20 000 руб.
                         </p>
 
@@ -148,7 +148,7 @@
 
                 </div>
 
-                <div class="choice_main-card">
+                <div class="choice_main-card js_choice_main-card" data-price="15000"  data-age="6" >
 
                     <div class="choice_main-card--header">
 
@@ -174,8 +174,8 @@
                             </li>
 
                             <li>
-                                <span>
-                                    2 мес.
+                                <span class="js_card-age">
+                                    6 мес.
                                 </span>
 
                                 Возраст
@@ -191,7 +191,7 @@
 
                         </ul>
 
-                        <p>
+                        <p class="js_card-cost" >
                             15 000 руб.
                         </p>
 
@@ -208,7 +208,7 @@
 
                 </div>
 
-                <div class="choice_main-card">
+                <div class="choice_main-card js_choice_main-card" data-price="30000"  data-age="5">
 
                     <div class="choice_main-card--header">
 
@@ -234,8 +234,8 @@
                             </li>
 
                             <li>
-                                <span>
-                                    2 мес.
+                                <span class="js_card-age">
+                                    5 мес.
                                 </span>
 
                                 Возраст
@@ -251,7 +251,7 @@
 
                         </ul>
 
-                        <p>
+                        <p class="js_card-cost" >
                             30 000 руб.
                         </p>
 
@@ -268,7 +268,67 @@
 
                 </div>
 
-                <div class="choice_main-card">
+                <div class="choice_main-card js_choice_main-card js_sold"  data-price="80000"  data-age="4">
+
+                    <div class="choice_main-card--header">
+
+                        <img src="./images/img_3.jpg" alt="Cat">
+
+                        <div class="choice_card-like js_choice_card-like ">
+                            <img src="./images/svg/icon-like.svg" alt="Like">
+                        </div>
+
+                    </div>
+
+
+                    <div class="choice_main-card--main">
+
+                        <h3>
+                            Кот полосатый
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Коричневый окрас
+                            </li>
+
+                            <li>
+                                <span class="js_card-age">
+                                    4 мес.
+                                </span>
+
+                                Возраст
+                            </li>
+
+                            <li>
+                                <span>
+                                    4
+                                </span>
+
+                                Кол-во лап
+                            </li>
+
+                        </ul>
+
+                        <p class="js_card-cost" >
+                            80 000 руб.
+                        </p>
+
+                    </div>
+
+
+                    <div class="choice_main-card--footer">
+
+                        <div class="btn">
+                            Продан
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div class="choice_main-card js_choice_main-card" data-price="40000"  data-age="3">
 
                     <div class="choice_main-card--header">
 
@@ -298,8 +358,8 @@
                             </li>
 
                             <li>
-                                <span>
-                                    2 мес.
+                                <span class="js_card-age">
+                                    3 мес.
                                 </span>
 
                                 Возраст
@@ -315,7 +375,7 @@
 
                         </ul>
 
-                        <p>
+                        <p class="js_card-cost" >
                             40 000 руб.
                         </p>
 
@@ -331,69 +391,9 @@
                     </div>
 
                 </div>
-    
 
-                <div class="choice_main-card js_sold">
-
-                    <div class="choice_main-card--header">
-
-                        <img src="./images/img_3.jpg" alt="Cat">
-
-                        <div class="choice_card-like js_choice_card-like ">
-                            <img src="./images/svg/icon-like.svg" alt="Like">
-                        </div>
-
-                    </div>
-
-
-                    <div class="choice_main-card--main">
-
-                        <h3>
-                            Кот полосатый
-                        </h3>
-
-                        <ul>
-
-                            <li>
-                                Коричневый окрас
-                            </li>
-
-                            <li>
-                                <span>
-                                    2 мес.
-                                </span>
-
-                                Возраст
-                            </li>
-
-                            <li>
-                                <span>
-                                    4
-                                </span>
-
-                                Кол-во лап
-                            </li>
-
-                        </ul>
-
-                        <p>
-                            80 000 руб.
-                        </p>
-
-                    </div>
-
-
-                    <div class="choice_main-card--footer">
-
-                        <div class="btn">
-                            Продан
-                        </div>
-
-                    </div>
-
-                </div>
             </div>
-    
+     
             <div class="choice_footer">
                 <button type="button" class="btn btn-empty">
                     Показать еще 20

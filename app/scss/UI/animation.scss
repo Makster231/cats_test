@@ -1,0 +1,25 @@
+.js_message-item--anim {
+  animation: messageShow 4s forwards;
+}
+
+@keyframes messageShow {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  25% {
+    display: block;
+    opacity: 1;
+  }
+
+  75% {
+    display: none;
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
