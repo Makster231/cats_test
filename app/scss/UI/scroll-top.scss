@@ -11,6 +11,7 @@
   left: 5px;
   bottom: -150px;
   display: block;
+  z-index: 1000;
 
   &:hover {
     background-color: darken($grey, 25%);

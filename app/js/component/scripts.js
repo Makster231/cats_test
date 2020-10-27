@@ -1,8 +1,11 @@
 (function ($, window, document) {
 
   function showMessage(){
+    let message_text = 'Добавлено в избранное';
     let $message = $(".js_message");
-    $message.prepend("<p class='js_message-item--anim'>Добавлено в избранное</p>");
+
+    $message.text(message_text).fadeIn(); 
+    setTimeout(function() {$message.fadeOut();}, 2000);
   }
 
   function addInСhosen(){
