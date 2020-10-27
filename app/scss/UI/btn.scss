@@ -1,0 +1,48 @@
+.btn {
+  display: block;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+  color: $white;
+  background-color: $blue;
+  transition: 0.4s ease;
+  border-radius: 10px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: darken($blue, 20%);
+  }
+
+  &:active {
+    transition: 0s;
+    background-color: $black;
+  }
+
+  &-empty {
+    border: 1px solid #cacaca;
+    color: $black;
+    background-color: $white;
+    font-weight: normal;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+
+    &:active {
+      transition: 0s;
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  @media (max-width: $md) {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}

@@ -1,0 +1,24 @@
+.messaage {
+  display: block;
+  position: fixed;
+  transition: 0.5s ease;
+  text-align: center;
+  right: -1000px;
+  top: 10px;
+  width: 350px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background-color: $blue;
+  z-index: 9999;
+  border-radius: 10px;
+
+  p {
+    font-size: 18px;
+    color: $white;
+    font-weight: bold;
+  }
+
+  &.js_active {
+    right: 10px;
+  }
+}
