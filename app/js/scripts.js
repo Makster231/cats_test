@@ -35,6 +35,28 @@
 })(window.jQuery, window, document);
 
 (function ($, window, document) {
+  function activateBurgerMenu() {
+    if ($(window).width() < 640) {
+      $(".js_burger-btn").on("click", function () {
+        var $this = $(this);
+
+        if (!$this.hasClass("js_active")) {
+          $("body").addClass("js_burger-active");
+          $this.addClass("js_active");
+        } else {
+          $("body").removeClass("js_burger-active");
+          $this.removeClass("js_active");
+        }
+      });
+    }
+  }
+
+  $(function () {
+    activateBurgerMenu();
+  });
+})(window.jQuery, window, document);
+
+(function ($, window, document) {
   jQuery.validator.setDefaults({
     errorElement: "label",
     errorClass: "error",

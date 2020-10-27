@@ -1,4 +1,90 @@
-html,body{
-	font-family: 'Montserrat', sans-serif !important;
-	overflow-x: hidden;
+html,
+body {
+  font-family: "Montserrat", sans-serif !important;
+  overflow-x: hidden;
+}
+
+body {
+  &.js_burger-active {
+    main,
+    footer {
+      display: none;
+    }
+
+    .header_top-menu {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background-color: $black-light;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .burger_btn {
+        position: fixed;
+        right: 15px;
+        top: 30px;
+
+        span {
+          transform: rotate(-45deg);
+          top: 15px;
+          &:before {
+            opacity: 0;
+          }
+
+          &:after {
+            transform: rotate(-90deg);
+            top: 0;
+          }
+        }
+      }
+
+      & > li {
+        height: 100%;
+        display: block;
+        ul {
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+
+        li {
+          display: block;
+
+          a {
+            margin-right: 0;
+            padding: 20px;
+          }
+        }
+      }
+    }
+
+    .header_top-contacts {
+      display: block;
+      z-index: 105;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      bottom: 100px;
+      margin-left: 0;
+
+      a,
+      p {
+        text-align: center;
+      }
+
+      a {
+        width: 175px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
 }
