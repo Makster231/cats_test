@@ -6,6 +6,9 @@ body {
 
 body {
   &.js_burger-active {
+    overflow: hidden !important;
+    touch-action: none !important;
+
     main,
     footer {
       display: none;
